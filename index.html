@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Firebase Train Scheduler" />
+    <meta name="author" content="Danny S. Sprouse" />
+
+    <!-- TITLE -->
+    <title>Train Wreck Junction</title>
+
+    <!-- LINK TO CSS RESET -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+
+    <!-- LINK TO BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous" />
+
+    <!-- LINK TO FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+
+    <!-- SCRIPT FOR MOMENT.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <!-- LINK TO SITE CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+
+    <!-- PAGE CONTENT -->
+
+<body>
+    <div class="card">
+        <img class="card-img" id="headImage" src="assets/images/train_header.jpg" alt="Steam Engine Train Pulling Into Station">
+        <div class="card-img-overlay">
+            <h1 class="card-title" id="headTitle">TRAIN WRECK JUNCTION</h1>
+            <p class="card-text" id="headSubtitle">
+                <em>
+                    <q>Wherever your travels take you,
+                        <br />&nbsp;&nbsp;&nbsp;we can get you there!
+                    </q>
+                </em>
+            </p>
+        </div>
+    </div> <!-- closes card -->
+
+    <br />
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center backWood">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1>Current Train Schedule</h1>
+                                <h3 id="dateTime"></h3>
+                            </div>
+                        </div>
+                    </div> <!-- closes card header-->
+                    <div class="card-body backChalk">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <table class="table text-center" id="train-schedule-display">
+                                    <thead>
+                                        <tr>
+                                            <th>Train Name</th>
+                                            <th>Destination</th>
+                                            <th>Frequency (min)</th>
+                                            <th>Next Arrival</th>
+                                            <th>Minutes Away</th>
+                                            <th>Remove Train From List</th>
+                                        </tr>
+                                    </thead>
+                                        <tbody></tbody>
+                                </table>
+                            </div> <!-- closes col md 12-->
+                        </div> <!-- closes row-->
+                    </div>
+                </div> <!-- closes card -->
+            </div> <!--closes col-->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center backWood">
+                        <h1>Add Train</h1>
+                    </div>
+                    <div class="card-body backChalk">
+                        <div class="input-area">
+                            <div class="input-name">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="trainName">Train Name</label>
+                                        <input type="text" class="form-control" id="trainName" placeholder="Enter train name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="trainDestination">Destination</label>
+                                        <input type="text" class="form-control" id="trainDestination" placeholder="Enter destination" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="time">First Train Time &nbsp;(HH:mm - Military Time)</label>
+                                        <input type="number" class="form-control" id="firstTrain" placeholder="Enter time first train arrives" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="trainFrequency">Frequency (min)</label>
+                                        <input type="number" class="form-control" id="trainFrequency" placeholder="Enter how often this train runs" />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" id="submit-button">Add Train</button>
+                                </form>
+                            </div> <!-- closes input name-->
+                        </div> <!-- closes input area -->
+                    </div> <!--card body-->
+                </div> <!--closes card-->
+            </div> <!-- closes col-->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header text-center backWood">
+                        <h1>Welcome Aboard!</h1>
+                    </div>
+                    <img src="assets/images/all_aboard_fotolia.jpg" alt="man in train conductor uniform pointing" class="img-fluid mx-auto d-block" id="conductor" />
+                </div> <!-- closes card -->
+            </div> <!-- closes col -->
+        </div> <!-- closes row -->
+    </div> <!-- closes container-fluid -->
+
+    <br /><br />
+
+        <!-- Footer Information -->
+    <div class="footer">
+        <p>Copyright &#169; 2018</p>
+    </div>
+
+        <!-- SCRIPT FOR JQUERY -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+        <!-- SCRIPT FOR SITE JAVASCRIPT -->
+    <script src="assets/javascript/train.js"></script>
+
+</body>
+
+</html>
