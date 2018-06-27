@@ -133,8 +133,7 @@ $("#train-schedule-display").prepend("<tr><td>" + trainName + "</td><td>" + trai
 
 setInterval(timingLoad, 20000);
 function timingLoad() {
-    $('#away').load('index.html #away'),
-    $('#arrival').load('index.html #arrival')
+    $('#away').load('index.html #away')
 }
 
 // Handle the errors
