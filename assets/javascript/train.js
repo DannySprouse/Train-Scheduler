@@ -1,5 +1,13 @@
 $( document ).ready(function() {
 
+// Small JQuery Plugin - Wickedpicker - that will force user to only select a real military time when selecting when the first train will arrive
+
+    var options = {
+        twentyFour: true,
+    };
+
+$('.timepicker').wickedpicker(options);
+
 // Initialize Firebase
 
     var config = {
@@ -123,6 +131,12 @@ $(document).ready(function(){
 
 $("#train-schedule-display").prepend("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td><td>" + trainFrequency + "</td><td>" + nextTrainArrives + "</td><td>" + nextTrainMins + "</td><td>" + remove + "</td></tr>");
 
+setInterval(timingLoad, 20000);
+function timingLoad() {
+    $('#away').load('index.html #away'),
+    $('#arrival').load('index.html #arrival')
+}
+
 // Handle the errors
 
     }, function(errorObject) {
@@ -138,4 +152,7 @@ $(document).on("click", ".glyphicon-trash", deleteTrain);
         dataRef.ref().child(deleteKey).remove();
         location.reload();
     }
+
+
+
 }); // closes doc ready

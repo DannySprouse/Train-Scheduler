@@ -27,6 +27,9 @@
 
     <!-- LINK TO SITE CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+        <!-- LINK TO WICKEDPICKER CSS -->
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/wickedpicker.min.css" />
 </head>
 
     <!-- PAGE CONTENT -->
@@ -70,7 +73,7 @@
                                             <th>Destination</th>
                                             <th>Frequency (min)</th>
                                             <th>Next Arrival</th>
-                                            <th>Minutes Away</th>
+                                            <th id="away">Minutes Away</th>
                                             <th>Remove Train From List</th>
                                         </tr>
                                     </thead>
@@ -101,7 +104,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="time">First Train Time &nbsp;(HH:mm - Military Time)</label>
-                                        <input type="number" class="form-control" id="firstTrain" placeholder="Enter time first train arrives" />
+                                        <input type="text" name="timepicker" class=" timepicker form-control" id="firstTrain" placeholder="Enter time first train arrives" />
                                     </div>
                                     <div class="form-group">
                                         <label for="trainFrequency">Frequency (min)</label>
@@ -134,10 +137,13 @@
     </div>
 
         <!-- SCRIPT FOR JQUERY -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <!-- SCRIPT FOR SITE JAVASCRIPT -->
     <script src="assets/javascript/train.js"></script>
+
+        <!-- SCRIPT FOR WICKEDPICKER -->
+    <script src="assets/javascript/wickedpicker.js"></script>
 
 </body>
 
