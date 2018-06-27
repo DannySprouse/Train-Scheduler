@@ -131,11 +131,6 @@ $(document).ready(function(){
 
 $("#train-schedule-display").prepend("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td><td>" + trainFrequency + "</td><td>" + nextTrainArrives + "</td><td>" + nextTrainMins + "</td><td>" + remove + "</td></tr>");
 
-setInterval(timingLoad, 20000);
-function timingLoad() {
-    $('#away').load('index.html #away')
-}
-
 // Handle the errors
 
     }, function(errorObject) {
