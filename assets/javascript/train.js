@@ -147,9 +147,4 @@ $(document).on("click", ".glyphicon-trash", deleteTrain);
         location.reload();
     }
 
-    setInterval(function(){   
-        $("th").load("index.html");
-    }, 5000);
-
-
 }); // closes doc ready
