@@ -27,6 +27,11 @@ body {
     color: #000;
 }
 
+img {
+    max-width: 100%;
+}
+
+
 .schedule-color {
     background-color: #fff5e3;
     border: none;
@@ -159,10 +164,11 @@ footer {
     color: #fff;
 }
 
-  /* MEDIA QUERIES */
+                            /* MEDIA QUERIES */
 
-    /* On screens that are 600px or less, adjust header and footer info */
-@media screen and (max-width: 600px) {
+  
+    /* On screens that are 600px or less */
+@media (max-width: 600px) {
     #headImage1 {
         display: none;
     }
@@ -191,8 +197,153 @@ footer {
     }
 }
 
-    /* On screens that are 600px or less, adjust table to fit smaller screens */
-@media only screen and (max-width: 600px) {
+    /* On screens up to 375px */
+
+@media only screen and (max-width: 375px) {
+    #welcome-aboard {
+        display: none;
+    }
+    #train-schedule-display {
+        width: 600px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    #dateTime {
+        font-size: 14px;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border-top: 1px solid #ccc;
+        border-right: 1px dashed #ccc;
+        border-left: 1px dashed #ccc;
+        border-bottom: 4px solid #85b2af;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        text-align: right;
+        font-size: 12px;
+    }
+    td:before {
+        position: absolute;
+        top: 12px;
+        left: 4px;
+        width: 100%;
+        white-space: nowrap;
+        text-align: left;
+        font-size: 10px;
+    }
+    td:nth-of-type(1):before {
+        content: "Train Name: ";
+    }
+    td:nth-of-type(2):before {
+        content: "Destination: ";
+    }
+    td:nth-of-type(3):before {
+        content: "Frequency: ";
+    }
+    td:nth-of-type(4):before {
+        content: "Next Arrival Time: ";
+    }
+    td:nth-of-type(5):before {
+        content: "Minutes Away: ";
+    }
+    td:nth-of-type(6):before {
+        content: "Remove Train: ";
+    }
+}
+    /* On screens between 376px and 480px */
+
+@media (max-width: 480px) and (min-width: 376px) {
+    #headTitle {
+        font-size: 25px;
+        padding-top: 10px;
+    }
+    #headSubtitle {
+        font-size: 18px;
+        padding-top: 95px;
+    }
+    #train-schedule-display {
+        width: 600px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    #dateTime {
+        font-size: 14px;
+    }
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border-top: 1px solid #ccc;
+        border-right: 1px dashed #ccc;
+        border-left: 1px dashed #ccc;
+        border-bottom: 4px solid #85b2af;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        text-align: right;
+        font-size: 12px;
+    }
+    td:before {
+        position: absolute;
+        top: 12px;
+        left: 4px;
+        width: 100%;
+        white-space: nowrap;
+        text-align: left;
+        font-size: 10px;
+    }
+    td:nth-of-type(1):before {
+        content: "Train Name: ";
+    }
+    td:nth-of-type(2):before {
+        content: "Destination: ";
+    }
+    td:nth-of-type(3):before {
+        content: "Frequency: ";
+    }
+    td:nth-of-type(4):before {
+        content: "Next Arrival Time: ";
+    }
+    td:nth-of-type(5):before {
+        content: "Minutes Away: ";
+    }
+    td:nth-of-type(6):before {
+        content: "Remove Train: ";
+    }
+}
+
+    /* On screens no greater than 667px or less than 481px */
+    
+@media (max-width: 667px) and (min-width: 481px) {
+    #headTitle {
+        font-size: 32px;
+    }
+    #headSubtitle {
+        font-size: 22px;
+        padding-top: 55px;
+    }
+    #train-schedule-display {
+        width: 960px;
+    }
     h1 {
         font-size: 24px;
     }
@@ -247,29 +398,36 @@ footer {
     td:nth-of-type(6):before {
         content: "Remove Train: ";
     }
-    .container-schedule {
-        width: 100%;
-        margin: 0 auto;
-        padding-right: 40px;
-    }
 }
 
-    /* On screens that are no greater than 768, no less than 400px, reduce font size of table */
-
-@media (max-width: 768px) and (min-width: 400px) {
-        h1 {
-            font-size: 24px;
-        }
-        #dateTime {
-            font-size: 16px;
-        }
-        thead {
-            font-size: 20px;
-        }
-        tr, td {
-            font-size: 15px;
-        }
-        #headSubtitle {
-            font-size: 25px;
-        }
+    /* On screens no greater than 669px or less than 768px */
+    
+@media (max-width: 768px) and (min-width: 669px) {
+    h1 {
+        font-size: 24px;
     }
+    #dateTime {
+        font-size: 16px;
+    }
+    thead {
+        font-size: 15px;
+    }
+    tr, td {
+        font-size: 12px;
+    }
+    #headSubtitle {
+        font-size: 30px;
+    }
+}
+  
+          /* On screens no greater than 1280px, no less than 1200px */
+
+@media (max-width: 1280px) and (min-width: 1200px) {
+    .container-schedule {
+        padding-right: 275px;
+        margin-left: 100px;
+    }
+    body {
+        overflow-x: hidden;
+    }
+}
