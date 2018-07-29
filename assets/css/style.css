@@ -247,6 +247,11 @@ footer {
     td:nth-of-type(6):before {
         content: "Remove Train: ";
     }
+    .container-schedule {
+        width: 100%;
+        margin: 0 auto;
+        padding-right: 40px;
+    }
 }
 
     /* On screens that are no greater than 768, no less than 400px, reduce font size of table */
