@@ -28,22 +28,24 @@
     <!-- link to css stylesheet -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 
-    <!-- linkk to wickedpicker css -->
+    <!-- link to wickedpicker css -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/wickedpicker.min.css" />
-        <!-- link to favicon image -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    
-        <!-- link to social media buttons with fontawesome icon library -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-            crossorigin="anonymous" />
+
+    <!-- link to favicon image -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- link to social media buttons with fontawesome icon library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous" />
 </head>
 
-    <!-- PAGE CONTENT -->
+<!-- PAGE CONTENT -->
 
 <body>
     <div class="card">
-        <img class="card-img" id="headImage" src="assets/images/train_header.jpg" alt="Steam Engine Train Pulling Into Station">
+        <img class="card-img" id="headImage1" src="assets/images/train_header.jpg" alt="Steam Engine Train Pulling Into Station">
+        <img class="card-img" id="headImage2" src="assets/images/train_header_small.jpg" alt="Steam Engine Train Pulling Into Station">
         <div class="card-img-overlay">
             <h1 class="card-title" id="headTitle">TRAIN WRECK JUNCTION</h1>
             <p class="card-text" id="headSubtitle">
@@ -54,14 +56,14 @@
                 </em>
             </p>
         </div>
-    </div> <!-- closes card -->
+    </div>
 
-    <br />
+<br />
 
-    <div class="container-fluid">
+    <div class="container-fluid container-schedule">
         <div class="row">
             <div class="col">
-                <div class="card">
+                <div class="card schedule-color">
                     <div class="card-header text-center backWood">
                         <div class="row">
                             <div class="col-md-12 text-center">
@@ -69,7 +71,7 @@
                                 <h3 id="dateTime"></h3>
                             </div>
                         </div>
-                    </div> <!-- closes card header-->
+                    </div>
                     <div class="card-body backChalk">
                         <div class="row">
                             <div class="col-md-12 text-center">
@@ -84,13 +86,14 @@
                                             <th>Remove Train From List</th>
                                         </tr>
                                     </thead>
-                                        <tbody></tbody>
+                                    <tbody></tbody>
                                 </table>
-                            </div> <!-- closes col md 12-->
-                        </div> <!-- closes row-->
+                            </div>
+                        </div>
                     </div>
-                </div> <!-- closes card -->
-            </div> <!--closes col-->
+<br />
+                </div>
+            </div>
 
             <div class="col">
                 <div class="card">
@@ -111,7 +114,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="time">First Train Time &nbsp;(HH:mm - Military Time)</label>
-                                        <input type="text" name="timepicker" class=" timepicker form-control" id="firstTrain" placeholder="Enter time first train arrives" />
+                                        <input type="text" name="timepicker" class=" timepicker form-control" id="firstTrain" placeholder="Enter time first train arrives"
+                                        />
                                     </div>
                                     <div class="form-group">
                                         <label for="trainFrequency">Frequency (min)</label>
@@ -119,55 +123,55 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-lg mx-auto d-block" id="submit-button">Add Train</button>
                                 </form>
-                            </div> <!-- closes input name-->
-                        </div> <!-- closes input area -->
-                    </div> <!--card body-->
-                </div> <!--closes card-->
-            </div> <!-- closes col-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<br />
+            </div>
 
             <div class="col">
                 <div class="card">
                     <div class="card-header text-center backWood">
                         <h1>Welcome Aboard!</h1>
                     </div>
-                    <img src="assets/images/all_aboard_fotolia.jpg" alt="man in train conductor uniform pointing" class="img-fluid mx-auto d-block" id="conductor" />
-                </div> <!-- closes card -->
-            </div> <!-- closes col -->
-        </div> <!-- closes row -->
-    </div> <!-- closes container-fluid -->
-
-    <br /><br /><br /><br /><br /><br />
+                    <img src="assets/images/all_aboard_fotolia.jpg" alt="man in train conductor uniform pointing" class="img-fluid mx-auto d-block"
+                        id="conductor" />
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- footer info -->
     <footer class="container-fluid">
 
         <!-- copyright -->
-        <p>Copyright &#169; 2018 &nbsp; &nbsp;
+        <p id="copyright">Copyright &#169; 2018 &nbsp; &nbsp;
 
-        <!-- font awesome social button icons -->
-        <span class="social-icons">
-            <a href="https://www.linkedin.com/in/danny-sprouse" target="_blank" class="fab fa-linkedin">
-            </a>
-        </span>
-        <span class="social-icons">
-            <a href="https://github.com/DannySprouse" target="_blank" class="fab fa-github">
-            </a>
-        </span>
-        <span class="social-icons">
-            <a href="https://twitter.com/SprouseDanny" target="_blank" class="fab fa-twitter">
-            </a>
-        </span>
-        <span class="social-icons">
-            <a href="https://www.facebook.com/dannysprouseATL" target="_blank" class="fab fa-facebook">
-            </a>
-        </span>
-        <span class="social-icons">
-            <a href="https://www.pinterest.com/dannysprouse/" target="_blank" class="fab fa-pinterest">
-            </a>
-        </span>
-        <span class="social-icons">
-            <a href="https://500px.com/tcephotography" target="_blank" class="fab fa-500px"></a>
-        </span>
+            <!-- font awesome social button icons -->
+            <span class="social-icons">
+                <a href="https://www.linkedin.com/in/danny-sprouse" target="_blank" class="fab fa-linkedin">
+                </a>
+            </span>
+            <span class="social-icons">
+                <a href="https://github.com/DannySprouse" target="_blank" class="fab fa-github">
+                </a>
+            </span>
+            <span class="social-icons">
+                <a href="https://twitter.com/SprouseDanny" target="_blank" class="fab fa-twitter">
+                </a>
+            </span>
+            <span class="social-icons">
+                <a href="https://www.facebook.com/dannysprouseATL" target="_blank" class="fab fa-facebook">
+                </a>
+            </span>
+            <span class="social-icons">
+                <a href="https://www.pinterest.com/dannysprouse/" target="_blank" class="fab fa-pinterest">
+                </a>
+            </span>
+            <span class="social-icons">
+                <a href="https://500px.com/tcephotography" target="_blank" class="fab fa-500px"></a>
+            </span>
         </p>
     </footer>
 

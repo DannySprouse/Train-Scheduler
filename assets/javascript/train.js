@@ -35,6 +35,20 @@ $('.timepicker').wickedpicker(options);
 $("#submit-button").on("click", function(event) {
     event.preventDefault();
 
+    // Prevent empty field submission
+    if ($.trim($("#trainName").val()) === "") {
+        alert("You must enter a train name");
+        return false;
+    }
+    if ($.trim($("#trainDestination").val()) === "") {
+        alert("You must enter a train destination");
+        return false;
+    }
+    if ($.trim($("#trainFrequency").val()) === "") {
+        alert("You must enter a train frequency");
+        return false;
+    }
+
 // Logic for Storing / Retrieving Data
 
     trainName = $("#trainName").val().trim();
